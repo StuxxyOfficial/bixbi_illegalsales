@@ -31,7 +31,7 @@ function CreateTarget()
 				icon = "fas fa-money-bill-wave",
 				label = "Sell Items",
 				canInteract = function(entity)
-                    if IsPedDeadOrDying(entity, true) or IsPedAPlayer(entity) then return false end
+                    if IsPedDeadOrDying(entity, true) or IsPedAPlayer(entity) or GetVehiclePedIsIn(entity, true) > 0 then return false end
 					return true
                 end, 
 			},
